@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-
+/* colors  accent color: #C39EA0; main background color: #2e2e2e; secondary darker color: #422223;  */
 body, 
 html {
   margin: 0;
@@ -35,16 +35,20 @@ body {
   margin-right: auto;
 }
 
+a {
+	text-decoration: none;
+}
+/*
 header {
     width: 100%;
-    background-color:#45A29E;
+    background-color:#C39EA0;
 	overflow: hidden;
+
 }
 
-
-/* logo */
+ 
 .logo {
-	color: #fff;
+	color: #2e2e2e;
 	font-weight: bold;
 	text-align: undefined;
 	float: left;
@@ -53,7 +57,7 @@ header {
 	letter-spacing: 4px;
 }
 /* nav */
-
+/*
 nav {
 	margin-top: 15px;
 	float: right;
@@ -70,31 +74,197 @@ header nav ul {
 
 nav ul li {
 	float: left;
-	color: #FFFFFF;
 	font-size: 14px;
 	text-align: left;
 	margin-right: 25px;
 	letter-spacing: 2px;
-	font-weight: bold;
+	font-weight: 400;
 	transition: all 0.3s linear;
 }
 
 ul li a {
-	color: #FFFFFF;
+	color: #2e2e2e;
 	text-decoration: none;
 }
+
+
+
+
 ul li:hover a {
-	color: #66FCF1;
+	color: #422223;
+	font-weight: 900;
 }
+
+/* new nav set up as of April 1st */
+
+
+header {
+    width: 100%;
+    background-color:#C39EA0;
+	overflow: hidden;
+	margin-bottom: 80px;
+
+}
+
+/* nav section */
+
+.nav {
+  background-color: #C39EA0;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;	
+  margin: auto;
+  z-index: 3;	
+}
+
+.nav a {
+  color: #2e2e2e;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;	
+  list-style: none;
+  overflow: scroll;
+  background-color: #C39EA0;
+	
+}
+
+.nav li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover,
+.nav .menu-btn:hover {
+  	color: #422223;
+	font-weight: 900;
+}
+
+.logo {
+	color: #2e2e2e;
+	font-weight: bold;
+	text-align: undefined;
+	float: left;
+	letter-spacing: 4px;
+}
+
+.nav .logo {
+  display: block;
+  float: left;
+  font-size: 2em;	
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+
+.nav .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.nav .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 30px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.nav .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.nav .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.nav .menu-btn {
+  display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+/* nav responsive and text removal */
+/*
+@media (min-width: 600px) {
+  .nav li {
+    float: left;
+  }
+  .nav li a {
+    padding: 20px 30px;
+  }
+  .nav .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .nav .menu-icon {
+    display: none;
+  }
+	
+  
+}
+
+*/
 
 .about {
 	padding: 35px, 25px;
 	display: inline-block;
 	background-color: #2e2e2e;
-	margin-top: 0px;
-	margin-bottom: 10px;
+	margin-top: 25px;
 	color: #f8f8ff;
-	border-bottom: 2px solid #66FCF1;
+	border-bottom: 2px solid #C39EA0;
 	
 }
 
@@ -106,7 +276,7 @@ ul li:hover a {
 }
 
 .about a:hover {
-	color: #66FCF1;
+	color: #C39EA0;
 }
 
 aside img#jona {
@@ -131,17 +301,35 @@ aside:hover img#jona {
 	
 }
 
+.about h3 {
+	color: #C39EA0;
+}
+
 .about h1, p, h3 {
 	margin-left: 30px;
 }
 
 
 /* Porfolio section */
-
 .portfolio {
 	overflow: hidden;
-	border-bottom: 2px solid #66FCF1;
+	border-bottom: 2px solid #C39EA0;
+	margin: auto;
 }
+
+.portfolio h2, .resume h2 {
+	position: relative;
+	width: 100%;
+	margin: 5% 0 2% 0;
+	text-align: center;
+	font-size: 2.5em;
+	letter-spacing: 1.5px;
+	color: #f8f8ff;
+}
+
+
+/*
+
 .port {
 	position: relative;
 	width: 100%;
@@ -208,6 +396,59 @@ aside:hover img#jona {
 .port .gallery .img:hover img {
 	filter: brightness(1) grayscale(0);
 }
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  margin-bottom: 20px;
+  margin-top: 20px;	
+  padding: 10px;	
+  text-align: left;	
+	
+}
+
+.grid p {
+	margin-bottom: 25px;
+}
+
+/* port buttons in grid */
+.btn {
+  color: #2e2e2e;
+  padding: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  background: #C39EA0;	
+  margin-top: 10px;
+  margin-bottom: 10px;	
+  margin-left: 25px;	
+  transition-duration: 0.4s;	
+}
+
+.btn:hover {
+	color: #422223;
+	font-weight: 900;
+}
+
+
+.grid > article {
+  border: 2px solid #C39EA0;
+  background-color: #f8f8ff;
+  padding-bottom: 15px;		
+}
+
+.grid > article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
 
 /* RESUME */
 
@@ -217,15 +458,14 @@ aside:hover img#jona {
 	background-color: #2e2e2e;
 	margin-top: 0px;
 	color: #f8f8ff;
-	border-bottom: 2px solid #66FCF1;
+	border-bottom: 2px solid #C39EA0;
 }
 
-.resume h2 {
-	text-align: center;
+.work-last {
+	margin-bottom: 15px;
 }
-
 .work-detail h3 {
-	color: #66FCF1;
+	color: #C39EA0;
 }
  .job-company {
 	font-weight: 600;
@@ -233,6 +473,7 @@ aside:hover img#jona {
 
 .job-sum {
 	margin-left: 20px;
+	
 }
 .job-sum li {
 	list-style-type: disc;
@@ -254,18 +495,24 @@ aside:hover img#jona {
 }
 
 .contact a:hover {
-	color: #66FCF1;
+	color: #C39EA0;
 }
+
+
 
 /* FOOTER */
 .footer {
 	background-color: #2e2e2e;
-	color: #f8f8ff;
+	color: #C39EA0;
 	padding-top: 30px;
 	padding-bottom: 30PX;
 	text-align: center;
 	margin-bottom: 0px;
-	border-top: 2px solid #66FCF1;
+	border-top: 2px solid #C39EA0;
+}
+
+.footer p {
+	font-size: .75em;
 }
 
 
@@ -313,41 +560,159 @@ aside:hover img#jona {
 /* Responsive layout for contact */
 
 /* responsive layout for portfolio */
+/*
 @media only screen and (max-width: 768px){
 	.port .gallery {
 		display: grid;
 		grid-template-columns: auto auto auto;
 	}
 }
+*/
 
 @media only screen and (max-width: 430px){
 	h1 {
 	  font-size: 1em;
 	}
+	
+	/*
+	
 	.port .gallery {
 		display: block;
+	}
+	.about, .portfolio, .resume, .contact, .footer {
+		font-size: .75em;
 	}
 	
 	.port .gallery .img {
 		display: block;
 		width: 100%;
 	}
+	
+	*/
+	
+	.resume {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+  
+	
 }
+
+@media only screen and (max-width: 650px){
+	h1 {
+	  font-size: .5em;
+	}
+	
+	.logo {
+		width: 50%;
+	}
+	/*
+
+	.port .gallery {
+		display: block;
+	}
+	.resume {
+		font-size: .75em;
+	}
+	
+	.port .gallery .img {
+		display: block;
+		width: 100%;
+	}
+	
+	*/
+	
+	.resume {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	
+	
+}
+
+/*
+@media only screen and (max-width: 820px){
+	h1 {
+	  font-size: .5em;
+	}
+	
+	/*
+
+	.port .gallery {
+		display: block;
+	}
+	.resume {
+		font-size: .75em;
+	}
+	
+	.port .gallery .img {
+		display: block;
+		width: 100%;
+	}
+	
+
+	
+	.resume {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	
+	
+}
+
+*/
 
 /* responsive layout for whole site */
 
-@media screen and (min-width: 700px) {
+@media screen  and (min-width: 768px) {
 	
-	body {
-		font-size: 1em;
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+		body {
+			font-size: 1em;
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		aside img#jona {
+			max-width: 25%;
+		}
+		.work-item {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			column-gap: 15px;
+		}
 	
-	.work-item {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 15px;
-    }
+		.grid {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.nav {
+			max-width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+	  .nav li {
+		float: left;
+	  }
+
+	  .nav li a {
+		padding: 20px 30px;
+	  }
+
+	  .nav .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	  }
+
+	  .nav .menu-icon {
+		display: none;
+	  }
+	
+	
+
 }

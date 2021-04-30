@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JM Designs</title>
+<title>Jona McDuffie Designs</title>
  <link href="css/style.css" rel="stylesheet" type="text/css">	
  <!-- Icons library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
@@ -11,7 +11,9 @@
 </head>
 
 <body>
-	 <header>
+	
+	<!-- 
+<header>
 	 <a href="#">
     <h4 class="logo">JM DESIGNS</h4>
     </a>
@@ -24,21 +26,37 @@
       </ul>
 	</nav>
 </header>
+ 		-->
+	<header class="header">
+		<nav class="nav">
+		  <a href="index.html" class="logo">JM DESIGNS</a>
+		  <input class="menu-btn" type="checkbox" id="menu-btn" />
+		  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		  <ul class="menu">
+			  <li><a href="#about">ABOUT</a></li>
+			  <li><a href="#portfolio">PORTFOLIO</a></li>
+			  <li> <a href="#resume">RESUME</a></li>	
+        	  <li> <a href="#contact">CONTACT</a></li>
+		  </ul>
+	</nav>
+	</header>
+	
 	<main>
 	<section id="about" class="about">
 		<aside><img id="jona" src="images/jona.png"  alt="Jona McDuffie smiling with large black glasses" /> </aside>
 		<h1>Hello. I'm Jona.</h1>
       <h3>Graphic and Web Designer</h3>
       <p>I am a graphic designer, calligrapher, and web designer based in North Carolina. I have worked professionally as a designer for over six years. As a designer, my creative style is noticeable by the use of negative space and typographical hierarchy. I believe in providing content that matters without the extra unnecessary components.</p>
-		<p>I have created a blog to assist fellow creatives with tutorials, tips, and career advice. Check out my blog at <a href="http://www.heyishottheserif.com/blog/" target="_blank" title="design blog for hey i shot the serif">heyishottheserif.com</a></p>
+		<p>I have created a blog to assist fellow creatives with tutorials, tips, and career advice. Check out my blog at <a href="http://www.heyishottheserif.com/" target="_blank" title="design blog for hey i shot the serif">heyishottheserif.com</a></p>
 		</section>
 		
 		<!-- Portfolio --> 
 		
 		<section id="portfolio" class="portfolio">
-			
+			<h2>Portfolio</h2>
+			<!--
 			<div class="port">
-				<h2>Portfolio</h2>
+				
 					<div class="gallery">
 						<div class="img">
 							<img src="images/recreate-final.jpg" alt="illustration of a plant done in adobe illustrator"/>
@@ -59,11 +77,43 @@
 							<img src="images/200x200.jpg"/>
 						</div>
 						<div class="img">
-							<a href="http://wcet3.waketech.edu/jmcduffie/web140/viciouscycles/index.html" target="_blank"><img src="images/viciouscycles.png" alt="vicious cycles website"/></a>
+							<a href="#" target="_blank"><img src="images/viciouscycles.png" alt="vicious cycles website"/></a>
 						</div>
 				
 					</div>
 			</div>
+			-->
+			<div class="grid">
+				<article>
+				  <a href="https://wcet3.waketech.edu/jmcduffie/web287/biltmore/index.html" target="_blank"><img src="images/biltmore.jpg" alt="screenshot of biltmore companion site showing the header of a hiker and three card sections"></a>
+				  <div class="text">
+					<h3>Biltmore Companion Site</h3>
+					<p>Mock secondary site for Biltmore Estate visitors. All of the work was done using the Material design framework.</p>
+					 <br/> 
+					<a href="https://wcet3.waketech.edu/jmcduffie/web287/biltmore/index.html" target="_blank" class="btn">View Project</a>
+				  </div>
+				</article>
+				<article>
+				 <a href="https://wcet3.waketech.edu/jmcduffie/web287/jm-designs/index.html" target="_blank"> <img src="images/student-port.jpg" alt="flexbox grid of student portfolio showing graphic design projects"></a>
+				  <div class="text">
+					<h3>Student Portfolio Site</h3>
+					<p>This website was created using only HTML5 and CSS3. This site also features my graphic design work.</p>
+					 <br/> 
+					<a href="https://wcet3.waketech.edu/jmcduffie/web287/jm-designs/index.html" target="_blank" class="btn">View Project</a>
+				  </div>
+				</article>
+				<article>
+				 <a href="https://wcet3.waketech.edu/jmcduffie/web287/viciouscycles/index.html" target="_blank"> <img src="images/vicious-cycles.jpg" alt="home page screenshot for bicycle shop"></a>
+				  <div class="text">
+					<h3>Vicious Cycles</h3>
+					<p>Prototype website for Vicious Cycles using the Bootstrap framework.</p>
+					 <br/> 
+					<a href="https://wcet3.waketech.edu/jmcduffie/web287/viciouscycles/index.html" target="_blank" class="btn">View Project</a>
+				  </div>
+				</article>
+
+			</div>
+			
 			
 		</section>
 	
@@ -90,7 +140,7 @@
             </div>
           </section>
  			<br/>
-          <section class="work-item">
+          <section class="work-item work-last">
             <div class="work-detail">
               <h3>Graphic Design Specialist</h3>
               <p class="job-company">Civitas Institute</p>
@@ -112,7 +162,7 @@
 		<!-- contact -->
 		<section id="contact" class="contact">
 			<h2 style="text-align: center">Let's Work Together</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		
 	
 			<p style="text-align: center; font-weight: bold"><a href="mailto:jona.mcduffie@gmail.com">jona.mcduffie@gmail.com</a></p>
 		
